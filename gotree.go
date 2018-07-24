@@ -1,4 +1,4 @@
-package gotree 
+package gotree
 
 const (
 	newLine      = "\n"
@@ -19,6 +19,7 @@ type (
 		AddTree(tree Tree)
 		Items() []Tree
 		Text() string
+		SetText(newText string)
 		Print() string
 	}
 
@@ -49,6 +50,10 @@ func (t *tree) AddTree(tree Tree) {
 
 func (t *tree) Text() string {
 	return t.text
+}
+
+func (t *tree) SetText(newText string) {
+	t.text = newText
 }
 
 func (t *tree) Items() []Tree {
